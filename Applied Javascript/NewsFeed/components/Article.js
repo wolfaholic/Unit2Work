@@ -114,3 +114,22 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+function articleMaker (dataSet) {
+  //define the elements
+
+const article = document.createElement('div');
+const articleTitle = document.createElement('h2');
+const articleDate = document.createElement('p');
+const articleParagraph = document.createElement('p');
+const secondParagraph = document.createElement('p');
+const thirdParagraph = document.createElement('p');
+
+//adding class names
+article.classList.add('article')
+articleDate.classList.add('date')
+articleButton.classList.add('expandButton')
+
+//appending elements
+
+}
