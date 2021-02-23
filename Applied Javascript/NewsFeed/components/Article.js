@@ -124,6 +124,7 @@ const articleDate = document.createElement('p');
 const articleParagraph = document.createElement('p');
 const secondParagraph = document.createElement('p');
 const thirdParagraph = document.createElement('p');
+const articleButton = document.createElement('span');
 
 //adding class names
 article.classList.add('article')
@@ -131,5 +132,31 @@ articleDate.classList.add('date')
 articleButton.classList.add('expandButton')
 
 //appending elements
+article.append(articleTitle);
+article.append(articleDate);
+article.append(articleParagraph);
+article.append(secondParagraph);
+article.append(thirdParagraph);
+article.append(articleButton);
 
-}
+//adding content
+articleTitle.textContent = dataSet.title;
+articleDate.textContent = dataSet.date;
+articleParagraph.textContent = dataSet.firstParagraph;
+secondParagraph.textContent = dataSet.secondParagraph;
+thirdParagraph.textContent = dataSet.secondParagraph;
+articleButton.textContent = 'click to Read';
+
+//Event Listener
+articleButton.addEventListener('click', () => {
+  article.classList.toggle('article-open');
+  })
+  
+  return article;
+  }
+  
+  const articles = document.querySelector('.articles');
+  
+  data.forEach(news => {
+    articles.appendChild(articleMaker(news))
+  })
